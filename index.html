@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In — Graphite & Steel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="centered-monolith auth-card">
+        <div id="registration-success-banner" class="success-banner" style="display: none;" role="status" aria-live="polite">
+            Registration successful! Please log in.
+        </div>
+
+        <h1 class="auth-header">Log In</h1>
+
+        <form id="loginForm" novalidate>
+            <div role="status" aria-live="polite" class="form-summary-errors" id="formSummary"></div>
+
+            <div class="input-group">
+                <label for="email" class="input-brutal-label">Email</label>
+                <input type="email" id="email" name="email" class="input-brutal" required
+                       aria-invalid="false" aria-describedby="email-error">
+                <div id="email-error" class="input-brutal-error-message"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="password" class="input-brutal-label">Password</label>
+                <input type="password" id="password" name="password" class="input-brutal" required
+                       aria-invalid="false" aria-describedby="password-error">
+                <div id="password-error" class="input-brutal-error-message"></div>
+            </div>
+
+            <button type="submit" class="btn-brutal" id="loginSubmitBtn">
+                <span>Log In</span>
+                <span class="loading-spinner" style="display: none;" aria-hidden="true"></span>
+            </button>
+        </form>
+
+        <div class="auth-footer-link">
+            Don't have an account? <a href="signup.html">Sign Up</a>
+        </div>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

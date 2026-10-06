@@ -1,0 +1,15 @@
+- main [ref=e2]:
+  - heading "Log In" [level=1] [ref=e3]
+  - generic [ref=e4]:
+    - status
+    - generic [ref=e5]:
+      - generic [ref=e6]: Email
+      - textbox "Email" [ref=e7]
+    - generic [ref=e8]:
+      - generic [ref=e9]: Password
+      - textbox "Password" [ref=e10]
+    - button "Log In" [ref=e11] [cursor=pointer]
+  - generic [ref=e13]:
+    - text: Don't have an account?
+    - link "Sign Up" [ref=e14] [cursor=pointer]:
+      - /url: signup.html

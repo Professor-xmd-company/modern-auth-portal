@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up — Graphite & Steel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="centered-monolith auth-card">
+        <h1 class="auth-header">Sign Up</h1>
+
+        <form id="signupForm" novalidate>
+            <div role="status" aria-live="polite" class="form-summary-errors" id="formSummary"></div>
+
+            <div class="input-group">
+                <label for="username" class="input-brutal-label">Username</label>
+                <input type="text" id="username" name="username" class="input-brutal"
+                       minlength="3" maxlength="20" pattern="[a-zA-Z0-9]+" required
+                       aria-invalid="false" aria-describedby="username-error">
+                <div id="username-error" class="input-brutal-error-message"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="email" class="input-brutal-label">Email</label>
+                <input type="email" id="email" name="email" class="input-brutal" required
+                       aria-invalid="false" aria-describedby="email-error">
+                <div id="email-error" class="input-brutal-error-message"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="password" class="input-brutal-label">Password</label>
+                <input type="password" id="password" name="password" class="input-brutal"
+                       minlength="12" required
+                       aria-invalid="false" aria-describedby="password-error">
+                <div id="password-error" class="input-brutal-error-message"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword" class="input-brutal-label">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" class="input-brutal" required
+                       aria-invalid="false" aria-describedby="confirmPassword-error">
+                <div id="confirmPassword-error" class="input-brutal-error-message"></div>
+            </div>
+
+            <button type="submit" class="btn-brutal" id="signupSubmitBtn">
+                <span>Sign Up</span>
+                <span class="loading-spinner" style="display: none;" aria-hidden="true"></span>
+            </button>
+        </form>
+
+        <div class="auth-footer-link">
+            Already have an account? <a href="index.html">Log In</a>
+        </div>
+    </main>
+
+    <script src="js/signup.js"></script>
+</body>
+</html>
